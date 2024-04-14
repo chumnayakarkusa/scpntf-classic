@@ -895,6 +895,7 @@ Function MPMainLoop()
 		UpdateFluLights()
 		If (Not IsSpectator(mp_I\PlayerID)) Then ;CHECK FOR IMPLEMENTATION
 			UpdateGuns()
+			If g_I\HoldingGun = GUN_P90 Then UpdateScope()
 		EndIf
 		UpdatePlayerGunsServer()
 		PlayGunSoundsMP()
@@ -979,6 +980,8 @@ Function MPMainLoop()
 	CameraProjMode Camera,0
 	RenderWorld()
 	CameraProjMode ark_blur_cam,0
+	
+	If g_I\HoldingGun = GUN_P90 Then RenderScope()
 	
 	UpdateBlur(BlurVolume)
 	
@@ -1135,6 +1138,7 @@ Function MPMainLoopClient()
 		If (Not IsSpectator(mp_I\PlayerID)) Then ;CHECK FOR IMPLEMENTATION
 			UpdateGuns()
 			UpdatePlayerGun(mp_I\PlayerID)
+			If g_I\HoldingGun = GUN_P90 Then UpdateScope()
 		EndIf
 		PlayGunSoundsMP()
 		AnimateGunsServer()
@@ -1205,6 +1209,8 @@ Function MPMainLoopClient()
 	CameraProjMode Camera,0
 	RenderWorld()
 	CameraProjMode ark_blur_cam,0
+	
+	If g_I\HoldingGun = GUN_P90 Then RenderScope()
 	
 	UpdateBlur(BlurVolume)
 	
@@ -2674,6 +2680,6 @@ End Function
 
 ;~IDEal Editor Parameters:
 ;~F#31#70#7C#88#8E#9C#A9#B4#BA#D2#E9#FF#10B#122#133#14B#15F#168#171#181
-;~F#190#1F4#222#22C#237#276#2B4#2DF#2ED#2F6#3F6#4D6#4ED#4FF#503#5D6#5EB#610#615#730
-;~F#75B#7A1#7C2#7DD#82B#83A#848#85C#865#8D3#8E7#904#920#947#970#9B7#9BF#A67
-;~C#Blitz3D
+;~F#190#1F4#222#22C#237#276#2B4#2DF#2ED#4DC#4F3#505#509#5DC#5F1#616#61B#736#761#7A7
+;~F#7C8#7E3#831#840#84E#862#86B#8D9#8ED#90A#926#94D#976#9BD#9C5#A6D
+;~C#Blitz3D_TSS

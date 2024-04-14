@@ -1,0 +1,22 @@
+v0.2.9
+Save files from version 0.2.8 are compatible with this version.
+
+[SINGLEPLAYER]
+- The Ear Bears are now actual NPCs. This includes the following improvements:
+    * They can be killed with weapons;
+    * They can be spawned with the console;
+    * Upon shooting them from a far distance they can start running towards the player;
+    * Added more rooms where they can spawn. This includes Heavy Containment Zone;
+- Improved the event with SCP-173 spawning in the tunnel room (room2_tunnel_2);
+- Fixed player shooting their weapon after selecting an item in the clipboard;
+- Fixed SCP-1162 requiring to use mouse clicking instead of the "use" button;
+- Removed the ability for SCP-1162 to spawn lost key, disciplinary hearing and old badge for now until better alternatives are added;
+- Disabled medibay event with infected surgeon until it's reworked into a better state;
+- Fixed a bug where after going to the Light Containment Zone or Entrance Zone using the elevator the player would receive items that are given at the beginning of the game;
+- Other minor fixes and improvements;
+
+[MULTIPLAYER]
+- In Waves, fixed SCP-1048-A getting stuck in the doorway on the Offices map;
+- In Waves, fixed valve handles being hard to use.
+
+----------------------------------------------------------------------------------
